@@ -1,0 +1,25 @@
+[
+    {
+        "city": "Bethesda",
+        "country": "US",
+        "date": "03-03-2011",
+        "image": "assets/img/sunny.svg",
+        "temperature": 72,
+        "description": "sunny"
+    },
+    {
+        "city": "sdfsdf",
+        "country": "US",
+        "date": "03-03-2011",
+        "image": "assets/img/sunny.svg",
+        "temperature": 25,
+        "description": "sunny"
+    },
+    {
+        "id": 3,
+        "name": "James Thomas",
+        "city": " Las Vegas ",
+        "orderTotal": 29.99
+    }
+    
+]
