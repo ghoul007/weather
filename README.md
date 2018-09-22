@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/199e1f6030364949962e790fecc12dee)](https://app.codacy.com/app/ghoul007/weather?utm_source=github.com&utm_medium=referral&utm_content=ghoul007/weather&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.com/ghoul007/weather.svg?branch=master)](https://travis-ci.com/ghoul007/weather)
 [![Known Vulnerabilities](https://snyk.io/test/github/ghoul007/weather/badge.svg?targetFile=package.json)](https://snyk.io/test/github/ghoul007/weather?targetFile=package.json)
 [![DeepScan grade](https://deepscan.io/api/projects/3238/branches/27476/badge/grade.svg)](https://deepscan.io/dashboard#view=project&pid=3238&bid=27476)
