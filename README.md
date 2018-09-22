@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.com/ghoul007/weather.svg?branch=master)](https://travis-ci.com/ghoul007/weather)
 [![Known Vulnerabilities](https://snyk.io/test/github/ghoul007/weather/badge.svg?targetFile=package.json)](https://snyk.io/test/github/ghoul007/weather?targetFile=package.json)
 [![DeepScan grade](https://deepscan.io/api/projects/3238/branches/27476/badge/grade.svg)](https://deepscan.io/dashboard#view=project&pid=3238&bid=27476)
+![Build Status](https://img.shields.io/badge/angular-6.0.3-green.svg?longCache=true&style=plastic)]()
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/ghoul007/weather.svg?columns=all)](https://waffle.io/ghoul007/weather)
 
 # Weather
