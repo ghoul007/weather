@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ICurrentWeather } from '../interface';
 import { WeatherService } from '../weather/weather.service';
 
 @Component({
@@ -8,24 +7,36 @@ import { WeatherService } from '../weather/weather.service';
   styleUrls: ['./current-weather.component.scss']
 })
 export class CurrentWeatherComponent implements OnInit {
-  current: any;
+
+  current: any = [];
 
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
 
-    this.weatherService.getCurrentWeather('Bethesda', 'US')
-      .subscribe((data) => this.current = data)
-
-    // mock api
-    this.current = {
-      city: 'Bethesda',
-      country: 'US',
-      date: new Date(),
-      image: 'assets/img/sunny.svg',
-      temperature: 72,
-      description: 'sunny',
-    } as ICurrentWeather
+    this.weatherService.getCurrentWeather('tunis', 'tn')
+      .subscribe((data) => {
+        debugger
+        this.current = this.transformCurrentWeather(data)
+      })
   }
+
+
+  transformCurrentWeather(data: any) {
+    return {
+      city: data.name,
+      country: data.sys.country,
+      date: data.dt * 1000,
+      image: `http://openweathermap.org/img/w/${data.weather[0].icon}.png`,
+      temperature: this.convertKelvinToFahrenheit(data.main.temp),
+      description: data.weather[0].description
+    }
+  }
+
+
+  convertKelvinToFahrenheit(kelvin: number): number {
+    return kelvin * 9 / 5 - 459.67;
+  }
+
 
 }
