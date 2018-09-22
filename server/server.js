@@ -3,8 +3,7 @@
 var express     = require('express'),
     bodyParser  = require('body-parser'),
     app         = express(),
-    weathers   = require('./data/weather'),
-     ;
+    weathers   = require('./data/weather');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
