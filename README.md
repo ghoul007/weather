@@ -1,5 +1,7 @@
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/ghoul007/weather.svg?columns=all)](https://waffle.io/ghoul007/weather)
 
+[![Build Status](https://travis-ci.com/ghoul007/weather.svg?branch=master)](https://travis-ci.com/ghoul007/weather)
+
 # Weather
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
