@@ -1,19 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CurrentWeatherComponent } from './current-weather.component';
-
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { WeatherService } from '../weather/weather.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing'
 describe('CurrentWeatherComponent', () => {
   let component: CurrentWeatherComponent;
   let fixture: ComponentFixture<CurrentWeatherComponent>;
+  let weatherMockService;
+  beforeEach( () => {
 
-  beforeEach(async(() => {
+    weatherMockService= jasmine.createSpyObj(['getCurrentWeather'])
     TestBed.configureTestingModule({
-      declarations: [ CurrentWeatherComponent ]
+      declarations: [CurrentWeatherComponent],
+      imports: [HttpClientTestingModule],
+      providers: [{ provide: WeatherService, useValue: weatherMockService }],
+       schemas: [NO_ERRORS_SCHEMA]
     })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
+      .compileComponents();
+  
     fixture = TestBed.createComponent(CurrentWeatherComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
