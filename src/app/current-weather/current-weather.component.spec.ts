@@ -24,7 +24,5 @@ describe('CurrentWeatherComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+ 
 });

@@ -1,1 +1,1 @@
-FROM ghoul007/weather:2.1
+FROM ghoul007/weather2

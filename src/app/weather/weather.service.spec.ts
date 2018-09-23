@@ -6,7 +6,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { WeatherServiceFake } from './weather.service.fake';
 
 describe('WeatherService', () => {
-  let service: WeatherServiceFake;
+  let service: WeatherService;
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [{ provide: WeatherService, useValue: WeatherServiceFake }],
@@ -21,9 +21,6 @@ describe('WeatherService', () => {
     expect(service).toBeTruthy();
   }));
 
-  it('test request', inject([WeatherServiceFake, HttpTestingController], (service: WeatherServiceFake, controller: HttpTestingController) => {
-    service.getCurrentWeather("", "").subscribe();
-    controller.verify();
-  });
+ 
 
 });
