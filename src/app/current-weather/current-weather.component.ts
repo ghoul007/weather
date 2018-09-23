@@ -16,7 +16,6 @@ export class CurrentWeatherComponent implements OnInit {
 
     this.weatherService.getCurrentWeather('tunis', 'tn')
       .subscribe((data) => {
-        debugger
         this.current = this.transformCurrentWeather(data)
       })
   }
