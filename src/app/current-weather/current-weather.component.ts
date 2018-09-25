@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WeatherService } from '../weather/weather.service';
 
 @Component({
@@ -7,8 +7,7 @@ import { WeatherService } from '../weather/weather.service';
   styleUrls: ['./current-weather.component.scss']
 })
 export class CurrentWeatherComponent implements OnInit {
-
-  current: any = [];
+@Input() current: any  ;
 
   constructor(private weatherService: WeatherService) { }
 
