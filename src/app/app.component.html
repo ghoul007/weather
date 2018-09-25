@@ -2,6 +2,9 @@
     <h1>Welcome to weather</h1>
 </mat-toolbar>
 <div fxLayout="row" fxLayoutAlign="center">
+    <app-city-search  (searchEvent)="doSearch($event)" ></app-city-search>
+</div>
+<div fxLayout="row" fxLayoutAlign="center">
 
     <mat-card fxFlex="50vw">
         <mat-card-header>
@@ -11,7 +14,8 @@
             <mat-card-subtitle>Subtitle</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <router-outlet></router-outlet>
+            <app-current-weather [current]="current"> </app-current-weather>
+            <!-- <router-outlet></router-outlet> -->
         </mat-card-content>
         <mat-card-footer>
             ...
