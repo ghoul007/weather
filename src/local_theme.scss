@@ -1,0 +1,7 @@
+@import '~@angular/material/theming';
+@include mat-core();
+// mat-palette($base-palette, $default: 500, $lighter: 100, $darker: 700)
+$localcast-primary: mat-palette($mat-orange);
+$localcast-accent: mat-palette($mat-indigo, A400);
+$localcast-app-theme: mat-light-theme($localcast-primary, $localcast-accent);
+@include angular-material-theme($localcast-app-theme);

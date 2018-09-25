@@ -1,4 +1,20 @@
- 
-<h1>Welcome to weather</h1>
-<hr>
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+    <h1>Welcome to weather</h1>
+</mat-toolbar>
+<div fxLayout="row" fxLayoutAlign="center">
+
+    <mat-card fxFlex="50vw">
+        <mat-card-header>
+            <mat-card-title class="mat-display-4 ">
+                <div class="mat-title"> Current Weather </div>
+            </mat-card-title>
+            <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <router-outlet></router-outlet>
+        </mat-card-content>
+        <mat-card-footer>
+            ...
+        </mat-card-footer>
+    </mat-card>
+</div>
