@@ -25,7 +25,9 @@
     "docker:taillogs": "cross-conf-env docker logs -f $npm_package_config_imageName",
     "predocker:debug": "run-s docker:build docker:run",
     "docker:debug": "run-s  docker:taillogs",
-    "deploy": "npx now   --docker='now' --public"
+    "deploy": "npx now   --docker='now' --public",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -44,7 +46,8 @@
     "core-js": "^2.5.4",
     "node-sass": "^4.9.3",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.3",
@@ -68,5 +71,6 @@
     "ts-node": "~7.0.1",
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
-  }
+  },
+  "snyk": true
 }
